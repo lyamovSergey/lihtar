@@ -40,6 +40,8 @@ li {
   list-style: none;
 }
 .main-Background {
+  background: url(../img/bgtest.png) -260px 0px;
+  background-size: 140%;
   overflow: hidden;
   height: 2000px;
 }
@@ -162,6 +164,41 @@ li {
     transform: rotate(-2deg);
   }
 }
+@keyframes swingingBottle {
+  0% {
+    transform: rotate(2deg);
+  }
+  10% {
+    transform: rotate(-2deg);
+  }
+  20% {
+    transform: rotate(2deg);
+  }
+  30% {
+    transform: rotate(-2deg);
+  }
+  40% {
+    transform: rotate(2deg);
+  }
+  50% {
+    transform: rotate(-2deg);
+  }
+  60% {
+    transform: rotate(2deg);
+  }
+  70% {
+    transform: rotate(-2deg);
+  }
+  80% {
+    transform: rotate(2deg);
+  }
+  90% {
+    transform: rotate(-2deg);
+  }
+  100% {
+    transform: rotate(2deg);
+  }
+}
 .lantern {
   width: 100%;
   position: relative;
@@ -206,6 +243,7 @@ li {
 }
 .bottle-block .left-bottle img {
   width: 50%;
+  z-index: 10;
 }
 .bottle-block .left-bottle:after {
   content: "";
@@ -217,8 +255,8 @@ li {
   background-size: 92%;
   bottom: -120%;
   left: -41.5%;
-  z-index: -1;
-  animation: swinging 20s ease-in-out 0s infinite;
+  z-index: 1;
+  animation: swingingBottle 20s ease-in-out 0s infinite;
   transform-origin: 83% 0%;
 }
 .bottle-block .right-bottle {
@@ -228,6 +266,7 @@ li {
 }
 .bottle-block .right-bottle img {
   width: 50%;
+  z-index: 10;
 }
 .bottle-block .right-bottle:after {
   content: "";
@@ -237,10 +276,12 @@ li {
   height: 201%;
   background: url(../img/rightBottleShadow.png) 0px 0px no-repeat;
   background-size: 114%;
-  bottom: -120%;
-  right: -25.5%;
-  z-index: -1;
+  bottom: -100%;
+  right: -26.5%;
+  z-index: 1;
   transform: rotate(10deg);
+  animation: swingingBottle 20s ease-in-out 0s infinite;
+  transform-origin: 28% 0%;
 }
 .bottle-block .flag {
   display: -webkit-box;
