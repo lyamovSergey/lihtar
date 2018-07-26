@@ -485,6 +485,7 @@ main {
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
+  padding-right: 15px;
   border-bottom: 3px solid #391e07;
 }
 .menu__title p {
@@ -507,4 +508,54 @@ main {
   width: 15%;
   justify-content: space-between;
   font-size: 12px;
+}
+.menu__description {
+  padding: 10px 0;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  background: #fff;
+}
+.menu__description .menu__description__measure {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  padding-right: 15px;
+}
+.menu__description .menu__description__measure p {
+  font-family: 'ProximaNova-Light', sans-serif;
+  margin-left: 4%;
+  text-decoration: underline;
+}
+.menu__description .description__block {
+  padding: 10px 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.menu__description .description__block .wrapper {
+  flex-grow: 2;
+  margin-left: 0;
+}
+.menu__description .description__block h1 {
+  width: 100%;
+  font-family: 'ProximaNova-Light', sans-serif;
+  font-size: 24px;
+}
+.menu__description .description__block p {
+  font-family: 'ProximaNova-Light', sans-serif;
+}
+.menu__description .description__block .menu__description__vol,
+.menu__description .description__block .menu__description__price {
+  margin-left: 4%;
 }

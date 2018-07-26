@@ -30,10 +30,11 @@ $(function(){
 			.animate({height: 'hide'}, 300);
 	});
 
-	
+
 	//menu data
 	$('.submenu__list li').on('click', function(){
 		var noActiveLists = $(this).parents()[1];
+		var id = $(this).find('p').attr('id');
 		$(this).find('p')
 			.addClass('submenu__list_active')
 			.parent()
@@ -47,6 +48,22 @@ $(function(){
 			.find('p')
 			.text();
 		$('.nameCategories').text(nameCategories);
+
+
+		jQuery.each(menuData, function(i, val){ //перебор объекта с данными
+			var leng = 0;                       //длина объекта
+			if( i == id){						//активен определенный объект, он же ключ к данным
+				for( var key in val ){			//вычислить длину объекта
+					leng++;
+				};
+				for( var i = 1; i <=leng; i++ ){ //добавить необходимое количество данных в HTML
+
+					console.log( val[i]);
+				}
+			}
+
+		});
+		
 		
 	});
 

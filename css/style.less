@@ -424,6 +424,7 @@ main{
     .flexRow;
     justify-content: space-between;
     align-items: center;
+    padding-right: 15px;
     border-bottom: 3px solid #391e07;
     p{
         font-family: 'ProximaNova-Light', sans-serif;
@@ -443,6 +444,45 @@ main{
         width: 15%;
         justify-content: space-between;
         font-size: 12px;
+    }
+}
+.menu__description{
+    padding: 10px 0;
+    width: 100%;
+    .flexCol;
+    background: #fff;
+    .menu__description__measure{
+        .flexRow;
+        justify-content: flex-end;
+        padding-right: 15px;
+        p{
+            font-family: 'ProximaNova-Light', sans-serif;
+            margin-left: 4%;
+            text-decoration: underline;
+        }
+
+    }
+    .description__block{
+        padding: 10px 15px;
+        .flexRow;
+        justify-content: space-between;
+        align-items: center;
+        .wrapper{
+            flex-grow: 2;
+            margin-left: 0;
+        }
+        h1{
+            width: 100%;
+            font-family: 'ProximaNova-Light', sans-serif;
+            font-size: 24px;
+        }
+        p{
+            font-family: 'ProximaNova-Light', sans-serif;
+        }
+        .menu__description__vol,
+        .menu__description__price{
+            margin-left: 4%;
+        }
     }
 }
 
