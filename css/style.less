@@ -327,7 +327,7 @@ main{
 .menu-block{
     width: 100%;
     .flexRow;
-    border: 1px solid red;
+    
 }
 .banner{
     position: relative;
@@ -347,7 +347,6 @@ main{
 .menu{
     width: 100%;
     .flexRow;
-    border: 1px solid red;
     padding: 10px;
     justify-content: space-between;
     .leftColumn{
@@ -355,7 +354,6 @@ main{
     }
     .rightColumn{
         width: 70%;
-        border: 1px solid blue;
     }
     
     .submenu__list{
@@ -363,7 +361,7 @@ main{
     }
 }
 .menu__list > li > .activeItem{
-        background: black;
+        background: #391e07;
         color: #fff;
         transition: .3s;
     }
@@ -380,9 +378,15 @@ main{
         width: 70%;
         height: 100%;
         padding: 5%;
-        border-top-left-radius: 5px;
-        border-top-right-radius: 5px;
+        border-radius: 5px 5px 0 0;
         transition: .3s;
+        font-size: 16px;
+    }
+    .submenu__list_active{
+        background: #a36f42;
+        color: #fff;
+        
+        border-radius: 0px;
     }
 
 }
@@ -395,6 +399,10 @@ main{
     background: #fff;
     width: 70%;
     margin-left: 20%;
+    li{
+        border-top: 1px solid #fff;
+        border-bottom: 1px solid #fff;
+    }
     p{
         font-family: 'ProximaNova-Light', sans-serif; 
         width: 100%;
@@ -407,6 +415,34 @@ main{
             transition: 0s;
         }
 
+    }
+}
+
+
+//Right column
+.menu__title{
+    .flexRow;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 3px solid #391e07;
+    p{
+        font-family: 'ProximaNova-Light', sans-serif;
+
+    }
+    .nameCategories{
+        padding: 10px 50px;
+        text-align: center;
+        font-size: 20px;
+        background: #391e07;
+        color: #fff;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+    }
+    .wrapper{
+        .flexRow;
+        width: 15%;
+        justify-content: space-between;
+        font-size: 12px;
     }
 }
 
