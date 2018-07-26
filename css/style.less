@@ -39,6 +39,11 @@ font-style: italic;
     display: flex;
     flex-wrap: wrap;
 }
+.fontBanner{
+    font-size: 34px;
+    color: black;
+    top: 35%;
+}
 
 
 
@@ -60,16 +65,15 @@ li{
 }
 
 .main-Background{
-    background: url(../img/bgtest.png) -260px 0px;
-    background-size: 140%;
+    background: url(../img/bgtest.png)center top no-repeat;
+    background-size: 155%;
     overflow: hidden;
-    height: 2000px;
+    height: 3000px;
 }
 
 .container{
     width: 90%;
     margin: 0 auto;
-    border: 1px solid red;
     padding: 0px 5px;
 }
 
@@ -110,6 +114,7 @@ li{
     .wrapper{
         justify-content: center;
         align-items: center;
+        width: 70%;
         p{
             color: #fff;
         }
@@ -167,6 +172,19 @@ li{
            80% { transform: rotate(2deg); }
            90% { transform: rotate(-2deg); }
            100% { transform: rotate(2deg); }
+       }
+@keyframes ShadowBanner{
+        0% { transform: translate(-5px); }
+           10% { transform: translate(5px); }
+           20% { transform: translate(-5px); }
+           30% { transform: translate(5px); }
+           40% { transform: translate(-5px); }
+        50% { transform: translate(5px); }
+           60% { transform: translate(-5px); }
+           70% { transform: translate(5px); }
+           80% { transform: translate(-5px); }
+           90% { transform: translate(5px); }
+        100% { transform: translate(-5px); }
        }
 //lantern block
 .lantern{
@@ -250,14 +268,148 @@ li{
         transform-origin: 28% 0%;
     };
     .flag{
+        position: relative;
+        z-index: 10;    
         .flexRow;
         width: 100%;
         justify-content: center;
         img{
             width: 40%;
+            height: 100%;
+        }
+        p{
+            position: absolute;
+            .fontBanner;
+        }
+
+    }
+    .flag:after{
+        content: "";
+        display: block;
+        position: absolute;
+        width: 47%;
+        height: 163%;
+        background: url(../img/newsShadow.png) 0px 0px no-repeat;
+        background-size: 102%;
+        bottom: -55%;
+        left: 25%;
+        z-index: -1;
+        animation: ShadowBanner 20s ease-in-out 0s infinite;
+        transform-origin: 0% 0%;
+    }    
+}
+//Poster block
+.poster{
+    width: 100%;
+    justify-content: center;
+    .flexRow;
+    .poster__item{
+        position: relative;
+        width: 30%;
+        
+        .posterBG{
+            width: 100%;
+        }
+        .posterIMG{
+            position: absolute;
+            width: 70%;
+            top: 10%;
+            left: 15%;
+            box-shadow: 0px 0px 10px black;
+        }
+    }
+
+}
+//Menu block
+main{
+    margin-top: 150px;
+}
+.menu-block{
+    width: 100%;
+    .flexRow;
+    border: 1px solid red;
+}
+.banner{
+    position: relative;
+    width: 100%;
+    text-align: center;
+    img{
+        width: 40%;
+    }
+    p{
+        position: absolute;
+        width: 100%;
+        text-align: center;
+        .fontBanner;
+    }
+}
+//Menu
+.menu{
+    width: 100%;
+    .flexRow;
+    border: 1px solid red;
+    padding: 10px;
+    justify-content: space-between;
+    .leftColumn{
+        width: 25%;
+    }
+    .rightColumn{
+        width: 70%;
+        border: 1px solid blue;
+    }
+    
+    .submenu__list{
+        display: none;
+    }
+}
+.menu__list > li > .activeItem{
+        background: black;
+        color: #fff;
+        transition: .3s;
+    }
+.menu__list > li{
+    .flexRow;
+    align-items: center;
+    padding: 10px;
+    img{
+        width: 20%;
+    }
+}
+.menu__list{
+    p{
+        width: 70%;
+        height: 100%;
+        padding: 5%;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+        transition: .3s;
+    }
+
+}
+.menu__list > li p:hover,
+.menu__list > li img:hover{
+    cursor: pointer;
+    transition: .3s;
+}
+.submenu__list{
+    background: #fff;
+    width: 70%;
+    margin-left: 20%;
+    p{
+        font-family: 'ProximaNova-Light', sans-serif; 
+        width: 100%;
+        transition: 0s;
+    }
+    li:hover{
+        background: #a36f42;
+        p{
+            color: #fff;
+            transition: 0s;
         }
 
     }
 }
+
+
 
 
