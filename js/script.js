@@ -48,6 +48,7 @@ $(function(){
 			.find('p')
 			.text();
 		$('.nameCategories').text(nameCategories);
+		$('.description__block').remove();
 
 
 		jQuery.each(menuData, function(i, val){ //перебор объекта с данными
@@ -58,7 +59,13 @@ $(function(){
 				};
 				for( var i = 1; i <=leng; i++ ){ //добавить необходимое количество данных в HTML
 
-					console.log( val[i]);
+					$('.menu__description')
+					.append('<div class="description__block"><div class="wrapper"><h1>' +val[i].name+ '</h1><p>'+val[i].description+'</p></div><p class="menu__description__vol">' + val[i].vol + '</p><p class="menu__description__price">' + val[i].price + '</p></div>');
+					
+					// $('.description__block .wrapper').append('<h1>' + val[i].name + '</h1>');
+					// $('.description__block .wrapper').append('<p>' + val[i].description + '</p>');
+					// $('.description__block').append('<p class="menu__description__vol">' + val[i].vol + '</p>');
+					// $('.description__block').append('<p class="menu__description__price">' + val[i].price + '</p>');
 				}
 			}
 
