@@ -4,7 +4,7 @@ var $page = $('html, body');
 $('a[href*="#"]').click(function() {
     $page.animate({
         scrollTop: $($.attr(this, 'href')).offset().top
-    }, 400);
+    }, 700);
     return false;
 });	
 // MENU 
@@ -74,5 +74,32 @@ $('a[href*="#"]').click(function() {
 			.text();
 		$('.nameCategories').text(nameCategories);
 		dataMenu(id);
+	});
+
+
+//Gallery block
+	//gallery-nav lantern
+	$('.gallery-nav__item').on('click', function(){
+		var id = $(this).attr('id');
+		$('.photoBlock__item a').attr('href', )
+		
+		var img = $(this)
+			.find('img')
+			.attr('src');
+		if( img == "img/lantern-gallery.png" ){
+			$(this)
+				.find('img')
+				.attr('src', 'img/lantern-gallery-active1.png');
+			$(this)
+				.siblings()
+				.find('img')
+				.attr('src', 'img/lantern-gallery.png');	
+		}
+	});
+
+	//photo init
+	$('.photoBlock').masonry({
+  		columnWidth: '.photoBlock__item',
+  		itemSelector: '.photoBlock__item'
 	});
 });

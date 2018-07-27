@@ -4,9 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="css/photobox.css">
     <link rel="stylesheet" href="css/style.css">
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <script src="js/menuData.js"></script>
+    <script src="js/masonry.min.js"></script>
+    <script src="js/photobox.js"></script>
+
     <script src="js/script.js"></script>
     <title></title>
 </head>
@@ -43,7 +47,7 @@
                         <ul class="nav-menu">
                             <li><a href="">Головна</a></li>
                             <li><a href="#menu">Меню</a></li>
-                            <li><a href="">Галерея</a></li>
+                            <li><a href="#gallery">Галерея</a></li>
                             <li><a href="">Новини та акції</a></li>
                             <li><a href="">Відгуки</a></li>
                             <li><a href="">Замовити столик</a></li>
@@ -202,17 +206,184 @@
                                     <p class="vol">Кількість</p>
                                     <p class="price">Ціна, грн</p>
                                 </div>
-                                
                             </div>
                             <div class="menu__description">
-                                <!-- <div class="menu__description__measure">
-                                    <p class="measureFirst">50 мл</p>
-                                    <p class="measureSecond">200 мл</p>
-                                </div> -->
+                            	<!-- Data comes from  js/menuData.js -->
                             </div>
                         </div>
                     </div>
                 </div>
+<!--forYou-block  -->
+                <div class="forYou-block">
+                	<div class="banner">
+                        <img src="img/newsBanner.png" alt="">
+                        <p>Для Вас</p>
+                    </div>
+                    <div class="games-block">
+                    	<div class="games-block__item">
+                    		<img src="img/banner1.png" alt="">
+                    		<h2>Пиво власного виробництва</h2>
+                    		<p>Світле ------------- 25<br><br>Темне ------------- 25</p>
+                    	</div>
+                    	<div class="games-block__item">
+                    		<img src="img/banner2.png" alt="">
+                    		<h2>Настільні ігри</h2>
+                    		<p>Дженга<br>SPYFAL<br>Дабл</p>
+                    	</div>
+                    	<div class="games-block__item">
+                    		<img src="img/banner3.png" alt="">
+                    		<h2>Бізнес ланч</h2>
+                    		<p>Ланч 1 ------------- 25<br>Ланч 2 ------------- 25<br>Ланч 3 ------------- 25<br>Ланч 4 ------------- 25</p>
+                    	</div>
+                    	<div class="games-block__item">
+                    		<img src="img/banner4.png" alt="">
+                    		<h2>Бургери</h2>
+                    		<p><p>Бургер 1 ------------- 25<br>Бургер 2 ------------- 25<br>Бургер 3 ------------- 25</p>
+                    	</div>
+                    </div>
+                </div>
+<!--Gallery block  -->
+				<div class="gallery-block" id="gallery">
+					<div class="banner">
+                        <img src="img/newsBanner.png" alt="">
+                        <p>Галерея</p>
+                    </div>
+                    <div class="gallery-nav">
+                    	<div class="gallery-nav__item" id="banket">
+                    		<img class="gallery-nav__img" src="img/lantern-gallery-active1.png" alt="">
+                    		<p class="gallery-nav__hall">Банкетний зал</p>
+                    	</div>
+                    	<div class="gallery-nav__item" id="vip">
+                    		<img class="gallery-nav__img" src="img/lantern-gallery.png" alt="">
+                    		<p class="gallery-nav__hall">VIP зал</p>
+                    	</div>
+                    	<div class="gallery-nav__item" id="main">
+                    		<img class="gallery-nav__img" src="img/lantern-gallery.png" alt="">
+                    		<p class="gallery-nav__hall">Основний зал</p>
+                    	</div>
+                    </div>
+                    <!-- gallery plugin + masonry plugin -->
+                    <ul class="photoBlock banket-hall active-hall" id="bestgallerys">  
+                    	<li class="photoBlock__item">
+                    		<a href="img/banket/style1.jpg">
+                    			<img src="img/banket/style1.jpg" alt="">
+                    		</a>
+                    	</li>
+                    	<li class="photoBlock__item">
+                    		<a href="img/banket/style2.jpg">
+                    			<img src="img/banket/style2.jpg" alt="">
+                    		</a>
+                    	</li>
+                    	<li class="photoBlock__item height250">
+                    		<a href="img/banket/style3.jpg">
+                    			<img src="img/banket/style3.jpg" alt="">
+                    		</a>
+                    	</li>
+                    	<li class="photoBlock__item height350">
+                    		<a href="img/banket/style4.jpg">
+                    			<img src="img/banket/style4.jpg" alt="">
+                    		</a>
+                    	</li>
+                    	<li class="photoBlock__item width2">
+                    		<a href="img/banket/style5.jpg">
+                    			<img src="img/banket/style5.jpg" alt="">
+                    		</a>
+                    	</li>
+                    	<li class="photoBlock__item height350">
+                    		<a href="img/banket/style6.jpg">
+                    			<img src="img/banket/style7.jpg" alt="">
+                    		</a>
+                    	</li>
+                    	<li class="photoBlock__item height250">
+                    		<a href="img/banket/style7.jpg">
+                    			<img src="img/banket/style6.jpg" alt="">
+                    		</a>
+                    	</li>
+                    </ul>
+<!-- 
+                    <ul class="photoBlock vip-hall " id="bestgallerys">  
+                    	<li class="photoBlock__item">
+                    		<a href="img/vip/style1.jpg">
+                    			<img src="img/vip/style1.jpg" alt="">
+                    		</a>
+                    	</li>
+                    	<li class="photoBlock__item">
+                    		<a href="img/vip/style2.jpg">
+                    			<img src="img/vip/style2.jpg" alt="">
+                    		</a>
+                    	</li>
+                    	<li class="photoBlock__item height250">
+                    		<a href="img/vip/style3.jpg">
+                    			<img src="img/vip/style3.jpg" alt="">
+                    		</a>
+                    	</li>
+                    	<li class="photoBlock__item height350">
+                    		<a href="img/vip/style4.jpg">
+                    			<img src="img/vip/style4.jpg" alt="">
+                    		</a>
+                    	</li>
+                    	<li class="photoBlock__item width2">
+                    		<a href="img/vip/style5.jpg">
+                    			<img src="img/vip/style5.jpg" alt="">
+                    		</a>
+                    	</li>
+                    	<li class="photoBlock__item height350">
+                    		<a href="img/vip/style6.jpg">
+                    			<img src="img/vip/style7.jpg" alt="">
+                    		</a>
+                    	</li>
+                    	<li class="photoBlock__item height250">
+                    		<a href="img/vip/style7.jpg">
+                    			<img src="img/vip/style6.jpg" alt="">
+                    		</a>
+                    	</li>
+                    </ul>
+
+                     <ul class="photoBlock main-hall" id="bestgallerys">  
+                    	<li class="photoBlock__item">
+                    		<a href="img/main/style1.jpg">
+                    			<img src="img/main/style1.jpg" alt="">
+                    		</a>
+                    	</li>
+                    	<li class="photoBlock__item">
+                    		<a href="img/main/style2.jpg">
+                    			<img src="img/main/style2.jpg" alt="">
+                    		</a>
+                    	</li>
+                    	<li class="photoBlock__item height250">
+                    		<a href="img/main/style3.jpg">
+                    			<img src="img/main/style3.jpg" alt="">
+                    		</a>
+                    	</li>
+                    	<li class="photoBlock__item height350">
+                    		<a href="img/main/style4.jpg">
+                    			<img src="img/main/style4.jpg" alt="">
+                    		</a>
+                    	</li>
+                    	<li class="photoBlock__item width2">
+                    		<a href="img/main/style5.jpg">
+                    			<img src="img/main/style5.jpg" alt="">
+                    		</a>
+                    	</li>
+                    	<li class="photoBlock__item height350">
+                    		<a href="img/main/style6.jpg">
+                    			<img src="img/main/style7.jpg" alt="">
+                    		</a>
+                    	</li>
+                    	<li class="photoBlock__item height250">
+                    		<a href="img/main/style7.jpg">
+                    			<img src="img/main/style6.jpg" alt="">
+                    		</a>
+                    	</li>
+                    </ul> -->
+                    <script>
+					    $('#bestgallerys').photobox('a',{ //gallery plugin
+					        time:0,
+					        thumbs:true,
+					        zoomable:true
+					    });
+					</script>
+				</div>
             </main>
         </div>
     </div>

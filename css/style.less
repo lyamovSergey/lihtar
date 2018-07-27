@@ -68,7 +68,7 @@ li{
     background: url(../img/bgtest.png)center top no-repeat;
     background-size: 155%;
     overflow: hidden;
-    height: 3000px;
+    // height: 3000px;
 }
 
 .container{
@@ -333,6 +333,7 @@ main{
     position: relative;
     width: 100%;
     text-align: center;
+    margin-bottom: 50px;
     img{
         width: 40%;
     }
@@ -487,7 +488,88 @@ main{
         }
     }
 }
+// forYou-block
+.games-block{
+    margin-bottom: 50px;
+    .flexRow;
+    justify-content: space-around;
+    .games-block__item{
+        position: relative;
+        h2, p{
+            position: absolute;
+        }
+        h2{
+            top: 50%;
+            width: 100%;
+            text-align: center;
+        }
+        p{
+            font-family: 'ProximaNova-Light', sans-serif;
+            width: 100%;
+            text-align: center;
+            padding: 5px 10px;
+            margin-bottom: 5px;
+            top: 65%;
+        }
+    }
+}
+//Gallery block
+.gallery-nav{
+    width: 100%;
+    .flexRow;
+    justify-content: center;
+}
+.gallery-nav__item{
+    .flexCol;
+    width: 30%;
+    align-items: center;
+    margin-bottom: 50px;
+    p{
+        width: 100%;
+        text-align: center;
+        font-size: 30px;
+    }
+    p:hover, img:hover{
+        cursor: pointer;
+    }
 
+}
+.photoBlock{
+    // display: none;
+    margin: 0 auto;
+    box-shadow: 0px 0px 10px black;
+    .photoBlock__item{
+        z-index: 10;
+        transition: .3s;
+        width: 25%;
+        height: 300px;
+        margin-bottom: -1px;
+        border: 2px solid #fff;
+    }
+    .width2{
+        width: 50%;
+    }
+    .height350{
+        height: 400px;
+    }
+    .height250{
+        height: 200px;
+    }
+    img{
+        width: 100%;
+        height: 100%;
+    }
+}
+.photoBlock__item:hover{
+    background: #000;
+    transform: scale(1.1, 1.1);
+    transition: .3s;
+    z-index: 100;
+    box-shadow: 0px 0px 20px 10px black;
+};
+.active-hall{
+    display: block;
+}
 
 
 
