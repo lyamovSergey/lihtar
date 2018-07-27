@@ -42,7 +42,7 @@
                     <div class="nav-block">
                         <ul class="nav-menu">
                             <li><a href="">Головна</a></li>
-                            <li><a href="">Меню</a></li>
+                            <li><a href="#menu">Меню</a></li>
                             <li><a href="">Галерея</a></li>
                             <li><a href="">Новини та акції</a></li>
                             <li><a href="">Відгуки</a></li>
@@ -91,7 +91,7 @@
             </header>
 <!-- Main block -->
             <main>
-                <div class="menu-block">
+                <div class="menu-block" id="menu">
                     <div class="banner">
                         <img src="img/newsBanner.png" alt="">
                         <p>Меню</p>
@@ -126,12 +126,12 @@
                                     <ul class="submenu__list activeList">
                                         <li><p class="submenu__list_active" id="coctails">Коктельна карта</p></li>
                                         <li><p id="kofe">Чай / кава</p></li>
-                                        <li><p>Пиво</p></li>
-                                        <li><p>Настоянка</p></li>
-                                        <li><p>Горілка</p></li>
-                                        <li><p>Коньяк</p></li>
-                                        <li><p>Буржуйські напої</p></li>
-                                        <li><p>Настоянки / вермути</p></li>
+                                        <li><p id="beer">Пиво</p></li>
+                                        <li><p id="liqueur">Настоянка</p></li>
+                                        <li><p id="vodka">Горілка</p></li>
+                                        <li><p id="cognac">Коньяк</p></li>
+                                        <li><p id="viskey">Буржуйські напої</p></li>
+                                        <li><p id="vermut">Настоянки / вермути</p></li>
                                     </ul>
                                 </li>
                                 <li>
@@ -197,7 +197,7 @@
                         </div>
                         <div class="rightColumn">
                             <div class="menu__title">
-                                <p class="nameCategories">Коньяк</p>
+                                <p class="nameCategories"></p>
                                 <div class="wrapper">
                                     <p class="vol">Кількість</p>
                                     <p class="price">Ціна, грн</p>
@@ -205,26 +205,10 @@
                                 
                             </div>
                             <div class="menu__description">
-                                <div class="menu__description__measure">
-                                    <p>50 мл</p>
-                                    <p>1 пл</p>
-                                </div>
-                                <div class="description__block">
-                                    <div class="wrapper">
-                                        <h1>Бора Бора</h1>
-                                        <p>Состав: ананасовый сок, сок маракуйи, Сок лимона, Гренадин</p>
-                                    </div>
-                                    <p class="menu__description__vol">50</p>
-                                    <p class="menu__description__price">500</p>
-                                </div>
-                                <div class="description__block">
-                                    <div class="wrapper">
-                                        <h1>Абердин-Ангус</h1>
-                                        <p>Состав: шотландский виски, Ликёр Драмбуи, Лайма сок, Мёд</p>
-                                    </div>
-                                    <p class="menu__description__vol">60</p>
-                                    <p class="menu__description__price">600</p>
-                                </div>
+                                <!-- <div class="menu__description__measure">
+                                    <p class="measureFirst">50 мл</p>
+                                    <p class="measureSecond">200 мл</p>
+                                </div> -->
                             </div>
                         </div>
                     </div>

@@ -1,9 +1,18 @@
 $(function(){
+//header links (плавная прокрутка)
+var $page = $('html, body');
+$('a[href*="#"]').click(function() {
+    $page.animate({
+        scrollTop: $($.attr(this, 'href')).offset().top
+    }, 400);
+    return false;
+});	
 // MENU 
 	//menu animation accordeon
 	var nameCategoriesDefault = $('.submenu__list_active').text();
 	$('.menu .activeList').show();
 	$('.nameCategories').text(nameCategoriesDefault);
+	dataMenu("coctails");
 
 
 	$('.menu__list > li').on('click', function(){
@@ -29,6 +38,22 @@ $(function(){
 			.find('.submenu__list')
 			.animate({height: 'hide'}, 300);
 	});
+	function dataMenu(id){
+		$('.description__block').remove();
+		jQuery.each(menuData, function(i, val){ //перебор объекта с данными
+			var leng = 0;                       //длина объекта
+			if( i == id){						//активен определенный объект, он же ключ к данным
+				for( var key in val ){			//вычислить длину объекта
+					leng++;
+				};
+				for( var i = 1; i <= leng; i++ ){ //добавить необходимое количество данных в HTML
+
+					$('.menu__description')
+					.append('<div class="description__block"><div class="wrapper"><h1>' +val[i].name+ '</h1><p>'+val[i].description+'</p></div><p class="menu__description__vol">' + val[i].vol + '</p><p class="menu__description__price">' + val[i].price + '</p></div>');
+				}
+			}
+		});
+	}
 
 
 	//menu data
@@ -48,31 +73,6 @@ $(function(){
 			.find('p')
 			.text();
 		$('.nameCategories').text(nameCategories);
-		$('.description__block').remove();
-
-
-		jQuery.each(menuData, function(i, val){ //перебор объекта с данными
-			var leng = 0;                       //длина объекта
-			if( i == id){						//активен определенный объект, он же ключ к данным
-				for( var key in val ){			//вычислить длину объекта
-					leng++;
-				};
-				for( var i = 1; i <=leng; i++ ){ //добавить необходимое количество данных в HTML
-
-					$('.menu__description')
-					.append('<div class="description__block"><div class="wrapper"><h1>' +val[i].name+ '</h1><p>'+val[i].description+'</p></div><p class="menu__description__vol">' + val[i].vol + '</p><p class="menu__description__price">' + val[i].price + '</p></div>');
-					
-					// $('.description__block .wrapper').append('<h1>' + val[i].name + '</h1>');
-					// $('.description__block .wrapper').append('<p>' + val[i].description + '</p>');
-					// $('.description__block').append('<p class="menu__description__vol">' + val[i].vol + '</p>');
-					// $('.description__block').append('<p class="menu__description__price">' + val[i].price + '</p>');
-				}
-			}
-
-		});
-		
-		
+		dataMenu(id);
 	});
-
-
 });
