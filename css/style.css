@@ -49,6 +49,24 @@ li {
   background-size: 155%;
   overflow: hidden;
 }
+.toHeader-link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  align-items: center;
+  position: fixed;
+  bottom: 5%;
+  right: 1%;
+  z-index: 500;
+}
+.toHeader-link img {
+  width: 50px;
+  height: 50px;
+}
 .container {
   width: 90%;
   margin: 0 auto;
@@ -617,7 +635,6 @@ main {
   cursor: pointer;
 }
 .photoBlock {
-  display: none;
   margin: 0 auto;
   box-shadow: 0px 0px 10px black;
 }

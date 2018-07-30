@@ -2,6 +2,18 @@ $(function() {
 	//default
     dataMenu("coctails");
     showFoto('banket');
+    //link scroll top
+    
+    $(document).scroll(function(){
+        var linkPosition =  $('.toHeader-link').offset().top;
+        if( linkPosition >= 1400 ){
+            $('.toHeader-link').css({opacity: 1});
+        }else{
+            $('.toHeader-link').css({opacity: 0});
+        }
+    });
+
+
     //header links (плавная прокрутка)
     var $page = $('html, body');
     $('a[href*="#"]').click(function() {
