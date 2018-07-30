@@ -2,6 +2,8 @@ $(function() {
 	//default
     dataMenu("coctails");
     showFoto('banket');
+    $('.slider').bxSlider();
+
     //link scroll top
     
     $(document).scroll(function(){

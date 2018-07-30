@@ -5,19 +5,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="css/jquery.fancybox.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.15/jquery.bxslider.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="css/style.css">
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <script src="js/menuData.js"></script>
     <script src="js/photoData.js"></script>
     <script src="js/masonry.min.js"></script>
     <script src="js/jquery.fancybox.js"></script>
-
+    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
     <script src="js/script.js"></script>
     <title></title>
 </head>
 <body>
     <a href="#toHeader-link" class="toHeader-link">
-        
+
         <img src="img/UParrow.png" alt="">
     </a>
     <div class="main-Background">
@@ -54,7 +55,7 @@
                             <li><a href="#menu">Меню</a></li>
                             <li><a href="#gallery">Галерея</a></li>
                             <li><a href="">Новини та акції</a></li>
-                            <li><a href="">Відгуки</a></li>
+                            <li><a href="#reviews">Відгуки</a></li>
                             <li><a href="">Замовити столик</a></li>
                         </ul>
                     </div>
@@ -307,6 +308,45 @@
                     	</li>
                     </ul>
 				</div>
+<!--Reviews-block -->
+                <div class="reviews-block" id="reviews">
+                    <div class="banner">
+                        <img src="img/newsBanner.png" alt="">
+                        <p>Відгуки</p>
+                    </div>
+                    <div class="reviews__wrappepr">
+                        <div class="reviews__slider">
+                            <div class="slider">
+                                <div>
+                                    <h1>Андрій</h1>
+                                    <p>Fusce eget quam metus. Aenean a enim sed nisl pulvinar sollicitudin. Proin ultrices orci ac magna scelerisque pretium. Maecenas varius dui ut nibh vehicula, vel consequat nibh pretium. Morbi pharetra pharetra viverra. Donec vestibulum lorem nibh. Praesent faucibus ac nibh et.</p>
+                                </div>
+                                <div>
+                                    <h1>Вася</h1>
+                                    <p>Fusce eget quam metus. Aenean a enim sed nisl pulvinar sollicitudin. Proin ultrices orci ac magna scelerisque pretium. Maecenas varius dui ut nibh vehicula, vel consequat nibh pretium. Morbi pharetra pharetra viverra. Donec vestibulum lorem nibh. Praesent faucibus ac nibh ac magna scelerisque pretium. Maecenas varius dui ut nibh vehicula, vel ac magna scelerisque pretium. Maecenas varius dui ut nibh vehicula, vel consequat nibh pretium. Morbi pha consequat nibh pretium. Morbi pha et.</p>
+                                </div>
+                                <div>
+                                    <h1>Эскобар</h1>
+                                    <p>Fusce eget quam metus. Aenean a enim sed nisl pulvinar sollicitudin. Proin ultrices orci ac magna scelerisque pretium. Maecenas varius dui ut nibh vehicula, vel consequat nibh pretium. Morbi pharetra pharetra viverra. Donec vestibulum lorem nibh. Praesent faucibus ac nibh et.</p>
+                                </div>
+                                <div>
+                                    <h1>Джонни Дилинджер</h1>
+                                    <p>Fusce eget quam metus. Aenean a enim sed nisl pulvinar sollicitudin. Proin ultrices orci ac magna scelerisque pretium. Maecenas varius dui ut nibh vehicula, vel consequat nibh pretium. Morbi pharetra pharetra viverra. Donec vestibulum lorem nibh. Praesent faucibus ac nibh et.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="reviews__form">
+                            <h1>Залиште свій відгук</h1>
+                            <form action="" method="POST">
+                                <input type="text" name="name" placeholder="Ім’я" required>
+                                <textarea name="rewiew" id="" cols="30" rows="10" placeholder="Ваш відгук" required></textarea>
+                                <label for="formButton">
+                                    <input id="formButton" type="submit" value="Відправити">
+                                </label>
+                            </form>
+                        </div>
+                    </div>
+                </div>
             </main>
         </div>
     </div>

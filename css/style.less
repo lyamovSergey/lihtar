@@ -65,8 +65,8 @@ li{
 }
 
 .main-Background{
-    background: url(../img/bgtest.png)center top no-repeat;
-    background-size: 155%;
+    background: url(../img/bgtest.png) center -100px no-repeat;
+    background-size: 170%;
     overflow: hidden;
     // height: 3000px;
 }
@@ -78,10 +78,15 @@ li{
     bottom: 5%;
     right: 1%;
     z-index: 500;
+    transition: .3s;
     img{
         width: 50px;
         height: 50px;
     }
+}
+.toHeader-link:hover{
+    bottom: 6%;
+    transition: .3s;
 }
 .container{
     width: 90%;
@@ -577,11 +582,108 @@ main{
     transform: scale(1.1, 1.1);
     transition: .3s;
     z-index: 100;
-    box-shadow: 0px 0px 20px 10px black;
+    box-shadow: 0px 0px 30px black;
 };
 .active-hall{
     display: block;
 }
 
+// Reviews-block
 
+.reviews-block{
+    padding-top: 50px;
+    padding-bottom: 550px;
+}
+.reviews__wrappepr{
+    width: 100%;
+    .flexRow;
+    justify-content: space-between;
+    .reviews__slider{
+        width: 60%;
+    }
+// Form    
+    .reviews__form{
+        width: 39%;
+        padding: 15px 0;
+        h1{
+            width: 100%;
+            text-align: center;
+            color: #391e07;
+        }
+        form{
+            .flexCol;
+            padding: 0 10%;
+            align-items: center;
+            input[type="text"],
+            textarea{
+                width: 100%;
+                font-family: 'ProximaNova-Light', sans-serif;
+                font-size: 14px;
+                padding: 10px 15px;
+                margin-bottom: 5%;
+            }
+            label{
+                width: 100%;
+                height: 50px;
+                position: relative;
+                input{
+                    width: 100%;
+                    opacity: 0;
+                }
+                input:hover{
+                     cursor: pointer;
+                }
+            }
+            label:hover{
+                cursor: pointer;
+            }
+            label:before{
+                content: 'Відправити';
+                color: #fff;
+                background: url(../img/button.png) no-repeat;
+                position: absolute;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-size: contain;
+                width: 100%;
+                height: 100%;
+                font-size: 24px;
+            }
+        }
+    }
+}
+// Slider
+.reviews__slider{
+    padding-top: 5%;
+    .bx-wrapper{
+        background: none;
+        box-shadow: none;
+        border: none;
+        .bx-prev{
+            background: url(../img/left-arrow.png) no-repeat 0px 0px;
+        }
+        .bx-next{
+            background: url(../img/right-arrow.png) no-repeat 0px 0px;
+        }
+    }
+}
+.slider{
+    div{
+        .flexRow;
+        justify-content: center;
+        align-items: center;
+        padding: 15px 30px;
+        p{
+            font-family: 'ProximaNova-Light', sans-serif;
+            padding: 0 50px;
+            font-size: 14px;
+            font-weight: 200;
+            line-height: 2em;
+            text-align: center;
+            width: 100%;
+        }
 
+    }
+
+}

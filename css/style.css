@@ -45,8 +45,8 @@ li {
   list-style: none;
 }
 .main-Background {
-  background: url(../img/bgtest.png) center top no-repeat;
-  background-size: 155%;
+  background: url(../img/bgtest.png) center -100px no-repeat;
+  background-size: 170%;
   overflow: hidden;
 }
 .toHeader-link {
@@ -62,10 +62,15 @@ li {
   bottom: 5%;
   right: 1%;
   z-index: 500;
+  transition: .3s;
 }
 .toHeader-link img {
   width: 50px;
   height: 50px;
+}
+.toHeader-link:hover {
+  bottom: 6%;
+  transition: .3s;
 }
 .container {
   width: 90%;
@@ -664,8 +669,111 @@ main {
   transform: scale(1.1, 1.1);
   transition: .3s;
   z-index: 100;
-  box-shadow: 0px 0px 20px 10px black;
+  box-shadow: 0px 0px 30px black;
 }
 .active-hall {
   display: block;
+}
+.reviews-block {
+  padding-top: 50px;
+  padding-bottom: 550px;
+}
+.reviews__wrappepr {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.reviews__wrappepr .reviews__slider {
+  width: 60%;
+}
+.reviews__wrappepr .reviews__form {
+  width: 39%;
+  padding: 15px 0;
+}
+.reviews__wrappepr .reviews__form h1 {
+  width: 100%;
+  text-align: center;
+  color: #391e07;
+}
+.reviews__wrappepr .reviews__form form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  padding: 0 10%;
+  align-items: center;
+}
+.reviews__wrappepr .reviews__form form input[type="text"],
+.reviews__wrappepr .reviews__form form textarea {
+  width: 100%;
+  font-family: 'ProximaNova-Light', sans-serif;
+  font-size: 14px;
+  padding: 10px 15px;
+  margin-bottom: 5%;
+}
+.reviews__wrappepr .reviews__form form label {
+  width: 100%;
+  height: 50px;
+  position: relative;
+}
+.reviews__wrappepr .reviews__form form label input {
+  width: 100%;
+  opacity: 0;
+}
+.reviews__wrappepr .reviews__form form label input:hover {
+  cursor: pointer;
+}
+.reviews__wrappepr .reviews__form form label:hover {
+  cursor: pointer;
+}
+.reviews__wrappepr .reviews__form form label:before {
+  content: 'Відправити';
+  color: #fff;
+  background: url(../img/button.png) no-repeat;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-size: contain;
+  width: 100%;
+  height: 100%;
+  font-size: 24px;
+}
+.reviews__slider {
+  padding-top: 5%;
+}
+.reviews__slider .bx-wrapper {
+  background: none;
+  box-shadow: none;
+  border: none;
+}
+.reviews__slider .bx-wrapper .bx-prev {
+  background: url(../img/left-arrow.png) no-repeat 0px 0px;
+}
+.reviews__slider .bx-wrapper .bx-next {
+  background: url(../img/right-arrow.png) no-repeat 0px 0px;
+}
+.slider div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 15px 30px;
+}
+.slider div p {
+  font-family: 'ProximaNova-Light', sans-serif;
+  padding: 0 50px;
+  font-size: 14px;
+  font-weight: 200;
+  line-height: 2em;
+  text-align: center;
+  width: 100%;
 }
