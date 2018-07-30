@@ -4,13 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="css/photobox.css">
+    <link rel="stylesheet" href="css/jquery.fancybox.css">
     <link rel="stylesheet" href="css/style.css">
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <script src="js/menuData.js"></script>
     <script src="js/photoData.js"></script>
     <script src="js/masonry.min.js"></script>
-    <script src="js/photobox.js"></script>
+    <script src="js/jquery.fancybox.js"></script>
 
     <script src="js/script.js"></script>
     <title></title>
@@ -264,126 +264,44 @@
                     	</div>
                     </div>
                     <!-- gallery plugin + masonry plugin -->
-                    <ul class="photoBlock banket-hall active-hall" id="bestgallerys">  
+                    <!-- Data comes from  js/photoData.js -->
+                    <ul class="photoBlock banket-hall active-hall">  
                     	<li class="photoBlock__item">
-                    		<a href="">
+                    		<a href="" data-fancybox="gallery" data-caption="Caption #1">
                     			<img src="" alt="">
                     		</a>
                     	</li>
                     	<li class="photoBlock__item">
-                    		<a href="">
+                    		<a href="" data-fancybox="gallery" data-caption="Caption #2">
                     			<img src="" alt="">
                     		</a>
                     	</li>
                     	<li class="photoBlock__item height250">
-                    		<a href="">
+                    		<a href="" data-fancybox="gallery" data-caption="Caption #3">
                     			<img src="" alt="">
                     		</a>
                     	</li>
                     	<li class="photoBlock__item height350">
-                    		<a href="">
+                    		<a href="" data-fancybox="gallery" data-caption="Caption #4">
                     			<img src="" alt="">
                     		</a>
                     	</li>
                     	<li class="photoBlock__item width2">
-                    		<a href="">
+                    		<a href="" data-fancybox="gallery" data-caption="Caption #5">
                     			<img src="" alt="">
                     		</a>
                     	</li>
                     	<li class="photoBlock__item height350">
-                    		<a href="">
+                    		<a href="" data-fancybox="gallery" data-caption="Caption #6">
                     			<img src="" alt="">
                     		</a>
                     	</li>
                     	<li class="photoBlock__item height250">
-                    		<a href="">
+                    		<a href="" data-fancybox="gallery" data-caption="Caption #7">
                     			<img src="" alt="">
                     		</a>
                     	</li>
                     </ul>
-<!-- 
-                    <ul class="photoBlock vip-hall " id="bestgallerys">  
-                    	<li class="photoBlock__item">
-                    		<a href="img/vip/style1.jpg">
-                    			<img src="img/vip/style1.jpg" alt="">
-                    		</a>
-                    	</li>
-                    	<li class="photoBlock__item">
-                    		<a href="img/vip/style2.jpg">
-                    			<img src="img/vip/style2.jpg" alt="">
-                    		</a>
-                    	</li>
-                    	<li class="photoBlock__item height250">
-                    		<a href="img/vip/style3.jpg">
-                    			<img src="img/vip/style3.jpg" alt="">
-                    		</a>
-                    	</li>
-                    	<li class="photoBlock__item height350">
-                    		<a href="img/vip/style4.jpg">
-                    			<img src="img/vip/style4.jpg" alt="">
-                    		</a>
-                    	</li>
-                    	<li class="photoBlock__item width2">
-                    		<a href="img/vip/style5.jpg">
-                    			<img src="img/vip/style5.jpg" alt="">
-                    		</a>
-                    	</li>
-                    	<li class="photoBlock__item height350">
-                    		<a href="img/vip/style6.jpg">
-                    			<img src="img/vip/style7.jpg" alt="">
-                    		</a>
-                    	</li>
-                    	<li class="photoBlock__item height250">
-                    		<a href="img/vip/style7.jpg">
-                    			<img src="img/vip/style6.jpg" alt="">
-                    		</a>
-                    	</li>
-                    </ul>
-
-                     <ul class="photoBlock main-hall" id="bestgallerys">  
-                    	<li class="photoBlock__item">
-                    		<a href="img/main/style1.jpg">
-                    			<img src="img/main/style1.jpg" alt="">
-                    		</a>
-                    	</li>
-                    	<li class="photoBlock__item">
-                    		<a href="img/main/style2.jpg">
-                    			<img src="img/main/style2.jpg" alt="">
-                    		</a>
-                    	</li>
-                    	<li class="photoBlock__item height250">
-                    		<a href="img/main/style3.jpg">
-                    			<img src="img/main/style3.jpg" alt="">
-                    		</a>
-                    	</li>
-                    	<li class="photoBlock__item height350">
-                    		<a href="img/main/style4.jpg">
-                    			<img src="img/main/style4.jpg" alt="">
-                    		</a>
-                    	</li>
-                    	<li class="photoBlock__item width2">
-                    		<a href="img/main/style5.jpg">
-                    			<img src="img/main/style5.jpg" alt="">
-                    		</a>
-                    	</li>
-                    	<li class="photoBlock__item height350">
-                    		<a href="img/main/style6.jpg">
-                    			<img src="img/main/style7.jpg" alt="">
-                    		</a>
-                    	</li>
-                    	<li class="photoBlock__item height250">
-                    		<a href="img/main/style7.jpg">
-                    			<img src="img/main/style6.jpg" alt="">
-                    		</a>
-                    	</li>
-                    </ul> -->
-                   <!--  <script>
-					    $('#bestgallerys').photobox('a',{ //gallery plugin
-					        time:0,
-					        thumbs:true,
-					        zoomable:true
-					    });
-					</script> -->
 				</div>
             </main>
         </div>
