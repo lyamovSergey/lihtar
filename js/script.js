@@ -1,11 +1,14 @@
 $(function() {
-	//default
+//default
     dataMenu("coctails");
     showFoto('banket');
+//photo init
     $('.slider').bxSlider();
-
-    //link scroll top
-    
+    $('.photoBlock').masonry({
+        columnWidth: '.photoBlock__item',
+        itemSelector: '.photoBlock__item'
+    });
+//link scroll top    
     $(document).scroll(function(){
         var linkPosition =  $('.toHeader-link').offset().top;
         if( linkPosition >= 1400 ){
@@ -14,9 +17,7 @@ $(function() {
             $('.toHeader-link').css({opacity: 0});
         }
     });
-
-
-    //header links (плавная прокрутка)
+//header links (плавная прокрутка)
     var $page = $('html, body');
     $('a[href*="#"]').click(function() {
         $page.animate({
@@ -24,16 +25,11 @@ $(function() {
         }, 700);
         return false;
     });
-
-    // MENU 
-    //menu animation accordeon
+//menu animation accordeon
     var nameCategoriesDefault = $('.submenu__list_active').text();
     $('.menu .activeList').show();
-    $('.nameCategories').text(nameCategoriesDefault);
-    
-
+    $('.nameCategories').text(nameCategoriesDefault);    
     $('.menu__list > li').on('click', function() {
-
         $(this)
             .find('img')
             .attr('src', 'img/lantern-gallery-active1.png');
@@ -55,7 +51,6 @@ $(function() {
             .find('.submenu__list')
             .animate({ height: 'hide' }, 300);
     });
-
     function dataMenu(id) {
         $('.description__block').remove();
         jQuery.each(menuData, function(i, val) { //перебор объекта с данными
@@ -65,16 +60,13 @@ $(function() {
                     leng++;
                 };
                 for (var i = 1; i <= leng; i++) { //добавить необходимое количество данных в HTML
-
                     $('.menu__description')
                         .append('<div class="description__block"><div class="wrapper"><h1>' + val[i].name + '</h1><p>' + val[i].description + '</p></div><p class="menu__description__vol">' + val[i].vol + '</p><p class="menu__description__price">' + val[i].price + '</p></div>');
                 }
             }
         });
     }
-
-
-    //menu data
+//menu data
     $('.submenu__list li').on('click', function() {
         var noActiveLists = $(this).parents()[1];
         var id = $(this).find('p').attr('id');
@@ -93,10 +85,8 @@ $(function() {
         $('.nameCategories').text(nameCategories);
         dataMenu(id);
     });
-
-
-    //Gallery block
-    //gallery-nav lantern
+//Gallery block
+//gallery-nav lantern
     $('.gallery-nav__item').on('click', function() {
         var id = $(this).attr('id');
         var img = $(this)
@@ -112,9 +102,8 @@ $(function() {
                 .attr('src', 'img/lantern-gallery.png');
         }
         showFoto(id);
-
     });
-	        //Gallery add foto
+//Gallery add foto
 	function showFoto(id) {
 	    jQuery.each(ImageLinks, function(x, val) {
 	        if (x == id) {
@@ -126,23 +115,22 @@ $(function() {
 	                var link = links[index];
 	                $(val).attr('href', link);
 	            });
-
 	            $('.photoBlock__item').find('img').each(function(index, val) {
 	                var link = links[index];
 	                $(val).attr('src', link);
 	            });
 	        }
-	  //       $('#bestgallerys').photobox('a',{ //gallery plugin
-			//     time:0,
-			//     thumbs:true,
-			//     zoomable:true
-			// });
 	    });
 	};
-
-    //photo init
-    $('.photoBlock').masonry({
-        columnWidth: '.photoBlock__item',
-        itemSelector: '.photoBlock__item'
-    });
+//resrve table
+    $('.big-table').on('click', function(){
+        $(this).addClass('active-table')
+            .siblings()
+            .removeClass('active-table')
+            .parent()
+            .siblings()
+            .find('div')
+            .removeClass('active-table');
+        // $(this).siblings().removeClass('active-table');
+    })    
 });

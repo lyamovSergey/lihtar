@@ -44,10 +44,21 @@ a {
 li {
   list-style: none;
 }
-.main-Background {
-  background: url(../img/bgtest.png) center -100px no-repeat;
-  background-size: 170%;
+.header-background {
+  background: url(../img/HeaderBG.png) center top repeat-y;
   overflow: hidden;
+  background-size: 155%;
+  padding-bottom: 10%;
+  position: relative;
+  z-index: 5;
+}
+.main-background {
+  background: url(../img/mainBG.png) center top no-repeat;
+  margin-top: 5%;
+  background-size: cover;
+  padding-top: 5%;
+  position: relative;
+  z-index: 100;
 }
 .toHeader-link {
   display: -webkit-box;
@@ -401,9 +412,6 @@ li {
   left: 15%;
   box-shadow: 0px 0px 10px black;
 }
-main {
-  margin-top: 150px;
-}
 .menu-block {
   width: 100%;
   display: -webkit-box;
@@ -676,7 +684,7 @@ main {
 }
 .reviews-block {
   padding-top: 50px;
-  padding-bottom: 550px;
+  padding-bottom: 20%;
 }
 .reviews__wrappepr {
   width: 100%;
@@ -776,4 +784,77 @@ main {
   line-height: 2em;
   text-align: center;
   width: 100%;
+}
+footer {
+  position: relative;
+  width: 100%;
+  height: 500px;
+  z-index: 5;
+}
+.reserve-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.map {
+  background: url(../img/reserve.png);
+  background-size: cover;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 580px;
+  height: 300px;
+}
+.reserve__form {
+  width: 40%;
+  height: 350px;
+}
+.tables-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  flex-wrap: wrap;
+  height: 33%;
+  width: 100%;
+  padding-left: 55px;
+  align-items: center;
+}
+.tables-row div:hover {
+  cursor: pointer;
+}
+.big-table {
+  width: 80px;
+  height: 70px;
+}
+.small-table {
+  width: 65px;
+  height: 70px;
+}
+.big-table:nth-child(1) {
+  margin-left: 39px;
+}
+.big-table:nth-child(3) {
+  margin-left: 55px;
+}
+.row-1 {
+  padding-top: 5px;
+}
+.small-table {
+  margin-right: 27px;
+}
+.small-table:nth-child(1) {
+  margin-right: 25px;
+}
+.active-table {
+  background: url(../img/table.jpg);
+  background-size: cover;
 }
