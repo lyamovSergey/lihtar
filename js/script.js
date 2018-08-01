@@ -2,6 +2,9 @@ $(function() {
 //default
     dataMenu("coctails");
     showFoto('banket');
+    $('form').submit(function(){
+        return false;
+    });
 //photo init
     $('.slider').bxSlider();
     $('.photoBlock').masonry({

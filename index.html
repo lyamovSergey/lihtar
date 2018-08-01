@@ -20,7 +20,7 @@
     <a href="#toHeader-link" class="toHeader-link">
         <img src="img/UParrow.png" alt="">
     </a>
-    <!-- <div class="main-Background"> -->
+<!-- <div class="main-Background"> -->
     <div class="header-background">
         <div class="container">
 <!-- facade sign -->
@@ -272,8 +272,8 @@
                     		<p class="gallery-nav__hall">Основний зал</p>
                     	</div>
                     </div>
-                    <!-- gallery plugin + masonry plugin -->
-                    <!-- Data comes from  js/photoData.js -->
+<!-- gallery plugin + masonry plugin -->
+                        <!-- Data comes from  js/photoData.js -->
                     <ul class="photoBlock banket-hall active-hall">  
                     	<li class="photoBlock__item">
                     		<a href="" data-fancybox="gallery" data-caption="Caption #1">
@@ -355,7 +355,6 @@
 <!-- reserv block -->
         </div>
     </div>    
-    <!-- </div> -->
     <footer>
     	<div class="container">
     		<div class="reserve-block">
@@ -380,7 +379,28 @@
     					<div class="big-table" id="table13"></div>
     				</div>
     			</div>
-    			<div class="reserve__form"></div>
+    			<div class="reserve__form">
+                    <form action="">
+                        <div>
+                            <label for="#reserve__name">Ім’я</label>
+                            <input type="text" name="name"  id="reserve__name" placeholder="Ім’я">
+                        </div>
+                        <div>
+                            <label for="#reserve__phone">Номер телефона <span> (050-123-45-67)</span></label>   
+                            <input type="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{2}-[0-9]{2}" required id="reserve__phone" placeholder="050-123-45-67">
+                        </div>
+                        <div class="date">
+                            <label for="#reserve__date">Дата</label>   
+                            <input type="date" name="date" id="reserve__date">
+                        </div>
+                        <div class="person">
+                            <label for="#reserve__persone">К-сть персон</label> 
+                            <input type="number" name="person" min="1" max="10" required id="reserve__persone">
+                        </div>
+        
+                        <input type="submit">
+                    </form>             
+                </div>
     		</div>
     	</div>
     </footer>

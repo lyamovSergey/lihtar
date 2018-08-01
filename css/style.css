@@ -788,7 +788,6 @@ li {
 footer {
   position: relative;
   width: 100%;
-  height: 500px;
   z-index: 5;
 }
 .reserve-block {
@@ -796,7 +795,7 @@ footer {
   display: -ms-flexbox;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
 }
 .map {
@@ -815,8 +814,9 @@ footer {
   height: 300px;
 }
 .reserve__form {
-  width: 40%;
+  width: 300px;
   height: 350px;
+  border: 1px solid blue;
 }
 .tables-row {
   display: -webkit-box;
@@ -857,4 +857,53 @@ footer {
 .active-table {
   background: url(../img/table.jpg);
   background-size: cover;
+}
+.reserve__form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.reserve__form form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  flex-wrap: wrap;
+  background: #3a1e08;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+.reserve__form form div {
+  width: 100%;
+}
+.reserve__form form div label {
+  display: inline-block;
+  color: #fff;
+  font-family: 'ProximaNova-Light', sans-serif;
+  font-size: 14px;
+}
+.reserve__form form span {
+  font-size: 12px;
+  font-family: 'ProximaNova-Light', sans-serif;
+}
+.reserve__form input {
+  margin-bottom: 10px;
+  padding: 5px 10px;
+  width: 100%;
+  font-family: 'ProximaNova-Light', sans-serif;
+  font-size: 14px;
+}
+.reserve__form .person {
+  width: 35%;
+}
+.reserve__form .date {
+  width: 60%;
+}
+.reserve__form .date input {
+  font-size: 12px;
 }
