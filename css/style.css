@@ -727,7 +727,7 @@ li {
 }
 .reviews__wrappepr .reviews__form form label {
   width: 100%;
-  height: 50px;
+  height: 60px;
   position: relative;
 }
 .reviews__wrappepr .reviews__form form label input {
@@ -813,11 +813,6 @@ footer {
   width: 580px;
   height: 300px;
 }
-.reserve__form {
-  width: 300px;
-  height: 350px;
-  border: 1px solid blue;
-}
 .tables-row {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -832,12 +827,32 @@ footer {
   cursor: pointer;
 }
 .big-table {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
   width: 80px;
   height: 70px;
 }
+.big-table p {
+  display: none;
+  font-size: 20px;
+}
 .small-table {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
   width: 65px;
-  height: 70px;
+  height: 65px;
+}
+.small-table p {
+  display: none;
+  font-size: 20px;
 }
 .big-table:nth-child(1) {
   margin-left: 39px;
@@ -854,11 +869,23 @@ footer {
 .small-table:nth-child(1) {
   margin-right: 25px;
 }
-.active-table {
+.active-tableBig {
   background: url(../img/table.png);
   background-size: cover;
 }
+.active-tableBig p {
+  display: block;
+}
+.active-tableSmall {
+  background: url(../img/tableSmall.png);
+  background-size: cover;
+}
+.active-tableSmall p {
+  display: block;
+}
 .reserve__form {
+  background: url(../img/formBG.png);
+  background-size: cover;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -867,13 +894,23 @@ footer {
   -ms-flex-direction: column;
   flex-direction: column;
   justify-content: flex-end;
+  width: 320px;
+  height: 405px;
+}
+.reserve__form p {
+  width: 100%;
+  text-align: center;
+  color: #fff;
+  font-family: 'ProximaNova-Light', sans-serif;
+}
+.reserve__form p .numberTable {
+  font-size: 16px;
 }
 .reserve__form form {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   flex-wrap: wrap;
-  background: #3a1e08;
   justify-content: space-between;
   align-items: center;
   padding: 10px 20px;
@@ -906,4 +943,35 @@ footer {
 }
 .reserve__form .date input {
   font-size: 12px;
+}
+.reserve__form input[type="submit"] {
+  font-size: 20px;
+  background: #603e22;
+  border: none;
+  color: #fff;
+}
+.reserve__form input[type="submit"]:hover {
+  cursor: pointer;
+}
+.footer-Logo {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.footer-Logo img {
+  margin-bottom: 15px;
+}
+.footer-Logo p {
+  margin-bottom: 15px;
+  color: #fff;
+  font-size: 18px;
+  font-family: 'ProximaNova-Light', sans-serif;
+  font-weight: 600;
 }
