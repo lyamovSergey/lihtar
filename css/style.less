@@ -12,7 +12,11 @@ src: url('../fonts/ProximaNova-Light.ttf');
 font-weight: normal;
 font-style: italic;
 }
-
+.screenMiddle(@rules) {
+    @media screen and (max-width: 1024px) {
+        @rules();
+    };
+};
 
 
 .fontArnold(@size, @color){
@@ -72,6 +76,7 @@ li{
     padding-bottom: 10%;
     position: relative;
     z-index: 5;
+   
 }
 .main-background{
     background: url(../img/mainBG.png) center top no-repeat;
